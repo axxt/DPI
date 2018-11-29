@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logotipo_IFET.svg/2000px-Logotipo_IFET.svg.png">
+    <style>
+    #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(51,51,51);
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+        
+        #cabecalho {
+            background-image: url(http://s2.glbimg.com/GFWFHzRdc0Mmgf9Xnnt7dKB5uEw=/e.glbimg.com/og/ed/f/original/2017/05/29/estudo.jpg);
+             
+            
+             
+            padding: 15px;
+            width: 100%;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+    }
+    
+    .colum {
+        float: left;
+        width: 33.33%;
+        padding: 15px;
+    }
+    .column {
+        float: right;
+        width: 33.33%;
+        padding: 15px;
+    }
+    li {
+        float: left;
+    }
+    li a,
+    .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+    li.dropdown {
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    * {
+        color: white;
+    }
+    body {
+        background: rgb(238,238,238);
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .menu {
+        float: left;
+        width: 20%;
+    }
+    .menuitem {
+        padding: 8px;
+        margin-top: 7px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .main {
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    .right {
+        background-color: rgb(113, 200, 55);
+        float: left;
+        width: 50%;
+        padding: 10px 15px;
+        margin-top: 7px;
+    }
+    @media only screen and (max-width:800px) {
+        /* For tablets: */
+        
+        .main {
+            width: 80%;
+            padding: 0;
+        }
+        
+        .right {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width:500px) {
+        /* For mobile phones: */
+        
+        .menu,
+        .main,
+        .right {
+            width: 100%;
+        }
+    }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#flip").click(function() {
+                $("#panel").slideDown(5000);
+            });
+            $("#stop").click(function() {
+                $("#panel").stop();
+            });
+        });
+    </script>
+</head>
+
+<body style="font-family:Verdana;">
+    <div id="cabecalho">
+        <h1 style="color:#ff6600 ;"><center>Help <br>Aluno!</center></h1>
+        <h3><center>O nosso campus cada vez mais acessivel.</center></h3>
+       <center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logotipo_IFET.svg/2000px-Logotipo_IFET.svg.png" style="max-width:10%;"></center>
+    </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#home">Diretoria Acadêmica</a> </li>
+        <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">COLAB</a>
+            <div class="dropdown-content"> <a href="#">Laboratótios</a> </div>
+        </li>
+        <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">COAPAC</a>
+            <div class="dropdown-content"> <a href="#">Salas de Aulas</a> <a href="#">CA</a> <a href="#">Link 3</a> </div>
+        </li>
+    </ul>
+    <div class="colum">
+        <h2></h2> <img src=" https://scontent.frec10-1.fna.fbcdn.net/v/t31.0-8/28161492_1528041507313240_4255314163241361885_o.jpg?_nc_cat=105&_nc_ht=scontent.frec10-1.fna&oh=1184750b2eed93aa5661f75054808a43&oe=5CAD2AE9" style="float: left; width: 1258px">
+        <p></p>
+        <center> <img src="" style="max-width:100%" ;> </center>
+    </div>
+    <div class="column">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">Hello world!</div>
+    </div>
+    <div class="column">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+    });
+});
+</script>
+</head>
+<body>
+
+
+
+<button>Proximos Fériados</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"><center>Dia 03<br>Padroeira de Lajes</center></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"><center>Dia 25<br>Natal<center></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"><center>Dia 31<br> Virada de Ano.</center></div>
+
+    </div>
+
+    
+        <div style="background-color:rgb(113,200,55);text-align:center;padding:10px;margin-top:7px;font-size:12px; clear: both;"> ©2018 Campus Lajes</div>
+    </center>
+</body>
+
+</html>

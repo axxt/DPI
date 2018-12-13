@@ -5,6 +5,32 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logotipo_IFET.svg/2000px-Logotipo_IFET.svg.png">
     <style>
+    #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
     #panel, #flip {
     padding: 5px;
     text-align: center;
@@ -18,7 +44,8 @@
 }
         
         #cabecalho {
-            background-image: url(https://scontent.frec10-1.fna.fbcdn.net/v/t31.0-8/15590980_1131109393673122_1989322370533055816_o.jpg?_nc_cat=110&_nc_ht=scontent.frec10-1.fna&oh=377707f2e7cb4deac12618058bd1d4cd&oe=5CAEEC5D);
+            background-image: url(https://scontent.frec10-1.fna.fbcdn.net/v/t31.0-8/15590980_1131109393673122_1989322370533055816_o.jpg?_nc_cat=110&_nc_ht=scontent.frec10-1.fna&oh=377707f2e7cb4deac12618058bd1d4cd&oe=5CAEEC5D
+);
              
             
              
@@ -84,23 +111,7 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
-    aside {
-  float: left;
-  width: 30%;
-  height: 300px;
-  color: #ccc;
-  background: red;
-  padding: 20px;
-}
-    article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: blue;
-  height: 300px;
-}
-    *{
-        color: white;
+   
     }
     body {
         background: rgb(238,238,238);
@@ -129,13 +140,6 @@
         width: 50%;
         padding: 10px 15px;
         margin-top: 7px;
-    }
-    .img{
-        width: 100%;
-        height: 400px;
-        background-image: url('https://scontent.frec10-1.fna.fbcdn.net/v/t31.0-8/28161492_1528041507313240_4255314163241361885_o.jpg?_nc_cat=105&_nc_ht=scontent.frec10-1.fna&oh=1184750b2eed93aa5661f75054808a43&oe=5CAD2AE9');
-        background-size: 100% 100%;
-        background-attachment: scroll;
     }
     @media only screen and (max-width:800px) {
         /* For tablets: */
@@ -173,12 +177,12 @@
 
 <body style="font-family:Verdana;">
     <div id="cabecalho">
-        <h1 style="color:#ff6600 ;"><center>Help <br>Aluno!</center></h1>
-        <h3><center>O nosso horário, cada vez mais acessivel.</center></h3>
+        <h1 style="color: white;"><center>Help <br>Aluno!</center></h1>
+        <h3 style="color: white;"><center>O nosso horário, cada vez mais acessivel.</center></h3>
        <center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logotipo_IFET.svg/2000px-Logotipo_IFET.svg.png" style="max-width:10%;"></center>
     </div>
     <ul>
-        <li><a href="DPI.html">Home</a></li>
+           <li><a href="DPI.html">Home</a></li>
         <li><a href="DIAC.html">DIAC</a> </li>
         <li><a href="COEXPEIN.html">COEXPEIN</a> </li>
          <li><a href="COFIMPAT.html">COFIMPAT</a> </li>
@@ -189,43 +193,67 @@
         </li>
         <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">COAPAC</a>
             <div class="dropdown-content"> <a href="Aulas.html">Salas de Aulas</a> <a href="CAs.html">CA</a>  </div>
-        </li>
-        <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Oficinas Extras</a>
-        	<div class="dropdown-content"> <a href="Teatro.html">Teatro</a> 
+        
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Oficinas Extras</a>
+           <div class="dropdown-content"> <a href="Teatro.html">Teatro</a> 
             <div class="dropdown-content"> <a href="karate.html">Karatê</a> 
             <div class="dropdown-content"> <a href="Banda.html">Banda</a> 
             <div class="dropdown-content"> <a href="poetize.html">Poetize-se</a> </div>
-            
     </ul>
+
     <div class="colum">
-        <div>
-            <aside>
-                <center>
-                <p>Topico1</p>
-                <p>Topico2</p>
-                <p>Topico3</p>
-                </center>
-            </aside>
-        </div>
-        <div>
-            <article><center>
-                <h1>Titulo</h1>
-                <p>texto</p>
-            </center></article>
-        </div>
-        <p></p>
-        <center> </center>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+        <div id="flip"><h2 style="color: white;">↓Horário de Funcionamento↓</h2></div>
+        <div id="panel" style="display: none;">
+            <table id="customers">
+  <tr>
+    <th>Servidor</th>
+    <th>Função</th>
+    <th>Horário</th>
+  </tr>
+  <tr>
+    <td>Jerfeson Pinto torres</td>
+    <td>Coordenador de atividades<br> Estudantis/Enfermeiro</td>
+    <td>Segunda à Sexta<br>08:00 às 12:00 e 13:00 às 16:00</td>
+  </tr>
+  <tr>
+    <td>Larissa Karla Silveira Dias</td>
+    <td>Técnico em Enfermagem</td>
+    <td>Segunda à Sexta<br>09:00 às 12:00 e 13:00 às 18:00</td>
+  </tr>
+</table>
+
     </div>
     <div class="column">
-       
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+    });
+});
+</script>
+    </div>
+    <div class="column">
+      
 </head>
-</div>
-</body>
 <body>
 
-        <div style="background-color:rgb(113,200,55);text-align:center;padding:10px;font-size:12px; clear: both;"> ©2018 Campus Lajes</div>
+    </div>
+
+    
+        <div style="background-color:rgb(113,200,55);text-align:center;padding:10px;margin-top:7px;font-size:12px; clear: both;"> ©2018 Campus Lajes</div>
     </center>
 </body>
 
 </html>
-
